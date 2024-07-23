@@ -20,7 +20,7 @@ public class HtmlRender implements Render {
     private String linkCss;
 
     public HtmlRender() {
-        this("Api Change Log", "http://deepoove.com/swagger-diff/stylesheets/demo.css");
+        this("接口变更明细", "http://deepoove.com/swagger-diff/stylesheets/demo.css");
     }
 
     public HtmlRender(String title, String linkCss) {
@@ -55,10 +55,10 @@ public class HtmlRender implements Render {
             body().with(
                 header().with(h1(title)),
                 div().withClass("article").with(
-                    div_headArticle("Versions", "versions", p_versions),
-                    div_headArticle("What's New", "new", ol_new),
-                    div_headArticle("What's Deprecated", "deprecated", ol_miss),
-                    div_headArticle("What's Changed", "changed", ol_changed)
+                    div_headArticle("版本号", "versions", p_versions),
+                    div_headArticle("新增接口", "new", ol_new),
+                    div_headArticle("废弃接口", "deprecated", ol_miss),
+                    div_headArticle("更新接口", "changed", ol_changed)
                 )
             )
         );
